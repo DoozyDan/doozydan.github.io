@@ -215,6 +215,7 @@ nav > .nav-button-section > .nav-right-button > span {
 main {
     flex-grow: 1;
     position: relative;
+    top: var(--nav-height)
 }
 
 main > .article-main {
@@ -223,13 +224,14 @@ main > .article-main {
 
 main > .article-main > .article-top {
     display: grid;
+    /*height: calc(100vh - var(--nav-height));*/
     min-height: calc(100vh - var(--nav-height));
     max-height: calc(100vh - var(--nav-height));
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
-    position: relative;
+    /*position: relative;*/
     /*position: absolute;*/
-    top: var(--nav-height);
+    /*top: var(--nav-height);*/
     /*left: 0;*/
     /*right: 0;*/
 }
@@ -366,9 +368,8 @@ main > .article-main > .article-top > .article-title-section > h1 {
 
 
 .article-bottom {
-    position: relative;
-    top: var(--nav-height);
-
+    /*position: relative;*/
+    /*top: var(--nav-height);*/
     /*top: 100vh;*/
     /*left: 0;*/
     /*right: 0;*/
