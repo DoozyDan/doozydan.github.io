@@ -14,22 +14,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Dharma Gym For All - Home</title>
 </head>
-<body>
+<body id="overlay-hide" class="overlay-hide">
 <div class="cursor"></div>
 <div class="cursor2"></div>
-<nav>
+<nav id="nav-container">
     <div id="nav-logo-section" class="nav-section">
         <a href="index.html" class="nav-link-button nav-button">
             <img src="img/logo-white.webp" alt="logo" width="120" height="120">
         </a>
     </div>
     <div id="nav-link-section" class="nav-section">
-        <a href="contact.html" class="nav-link-button nav-button">CONTACT</a>
-        <a href="about.html" class="nav-link-button nav-button">ABOUT</a>
-        <a href="programs.html" class="nav-link-button nav-button">PROGRAMS</a>
-        <a href="resources.html" class="nav-link-button nav-button">RESOURCES</a>
+        <div id="nav-links">
+            <a href="contact.html" class="nav-link-button nav-button">CONTACT</a>
+            <a href="about.html" class="nav-link-button nav-button">ABOUT</a>
+            <a href="programs.html" class="nav-link-button nav-button">PROGRAMS</a>
+            <a href="resources.html" class="nav-link-button nav-button">RESOURCES</a>
+        </div>
+        <a href="javascript:void(0);" id="hamburger-button" class="nav-hamburger nav-button" onclick="hamburger()" aria-label="Menu">
+            <i id="hamburger-icon" class="fa fa-bars" aria-hidden="true"></i>
+        </a>
     </div>
-    <div class="nav-button-section nav-section">
+    <div id="nav-button-section" class="nav-section">
         <div class="social-buttons-container">
             <a href="https://www.instagram.com/dharmagymforall/" target="_blank" class="social-buttons"><i class="fa fa-instagram"></i></a>
             <a href="https://twitter.com/DharmaGymForAll" target="_blank" class="social-buttons"><i class="fa fa-twitter"></i></a>
@@ -40,6 +45,20 @@
 </nav>
 
 <main id="swup" class="transition-page-swipe">
+    <div id="overlay" class="overlay">
+        <div class="overlay-links">
+            <a href="contact.html" class="nav-link-button nav-button">CONTACT</a>
+            <a href="about.html" class="nav-link-button nav-button">ABOUT</a>
+            <a href="programs.html" class="nav-link-button nav-button">PROGRAMS</a>
+            <a href="resources.html" class="nav-link-button nav-button">RESOURCES</a>
+        </div>
+        <div class="social-buttons-container">
+            <a href="https://www.instagram.com/dharmagymforall/" target="_blank" class="social-buttons"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/DharmaGymForAll" target="_blank" class="social-buttons"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/Dharma-Gym-For-All-113993475392379/?ref=br_rs" target="_blank" class="social-buttons"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.youtube.com/user/DharmaVideo2012" target="_blank" class="social-buttons"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
     <article class="article-main">
         <div class="article-top">
             <div class="article-image-section article-section" id="article-img-1"></div>
@@ -94,6 +113,7 @@
 <script src="js/cursor.js"></script>
 <script src="js/swup-script.js"></script>
 <script src="js/scrollDown.js"></script>
+<script src="js/hamburger.js"></script>
 
 </body>
 </html>

@@ -118,6 +118,14 @@ nav > .nav-section {
     justify-content: center;
 }
 
+nav > .nav-section > #nav-links {
+    display: flex;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
 #nav-logo-section {
     justify-content: flex-start;
 }
@@ -132,7 +140,7 @@ nav > .nav-section {
 }
 
 #nav-logo-section > a:hover,
-#nav-link-section > a:hover {
+#nav-link-section > #nav-links > a:hover {
     transform: scale(150%);
 }
 
@@ -144,11 +152,11 @@ nav div a[aria-current=page] {
     transform: scale(150%);
 }
 
-#nav-link-section {
+#nav-link-section > #nav-links {
     gap: 6rem;
 }
 
-#nav-link-section > a {
+#nav-link-section > #nav-links > a {
     font-family: monospace;
     font-weight: 400;
     color: white;
@@ -173,24 +181,24 @@ nav div a[aria-current=page] {
     flex-grow: 1;
 }
 
-nav > .nav-button-section {
+nav > #nav-button-section {
     display: flex;
     flex-basis: calc(100% / 3)
 }
 
-nav > .nav-button-section > .nav-left-button {
+nav > #nav-button-section > .nav-left-button {
     border-right: 1px dotted var(--border-color);
     border-top: unset;
     border-left: unset;
     border-bottom: unset;
 }
 
-nav > .nav-button-section > .nav-right-button {
+nav > #nav-button-section > .nav-right-button {
     border: unset;
 }
 
-nav > .nav-button-section > .nav-left-button,
-nav > .nav-button-section > .nav-right-button {
+nav > #nav-button-section > .nav-left-button,
+nav > #nav-button-section > .nav-right-button {
     display: flex;
     width: 50%;
     justify-content: center;
@@ -198,8 +206,8 @@ nav > .nav-button-section > .nav-right-button {
     background-color: var(--background-color);
 }
 
-nav > .nav-button-section > .nav-left-button > span,
-nav > .nav-button-section > .nav-right-button > span {
+nav > #nav-button-section > .nav-left-button > span,
+nav > #nav-button-section > .nav-right-button > span {
     font-size: 5rem;
     transition: 300ms ease;
 }
@@ -210,6 +218,11 @@ nav > .nav-button-section > .nav-right-button > span {
 
 .nav-right-button:hover > span {
     transform: translateX(50%);
+}
+
+nav > #nav-link-section .nav-hamburger {
+    display: none;
+
 }
 
 main {
@@ -517,8 +530,80 @@ input[type=reset]:hover {
     transition: 300ms ease;
 }
 
+main > .overlay {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 2rem;
+    padding-top: 15%;
+    height: calc(100vh - var(--nav-height));
+    width: 0;
+    position: absolute;
+    overflow-y: hidden;
+    background-color: #1e1e1e;
+    z-index: 3;
+    transition: 300ms ease;
+}
 
-@media only screen and (max-width: 700px) {
+main > .overlay > .overlay-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+main > .overlay.responsive {
+    /*width: 100%;*/
+}
+
+.overlay-hide.responsive {
+    overflow-y: hidden;
+}
+
+nav > #nav-link-section > .nav-hamburger.responsive {
+    animation: rotate 300ms ease;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate1 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@media only screen and (max-width: 1350px) {
+    nav > #nav-button-section {
+        display: none;
+    }
+
+    nav > #nav-link-section > #nav-links {
+        display: none;
+    }
+
+    nav > #nav-link-section > .nav-hamburger {
+        display: block;
+    }
+
+    main > .article-main > .article-bottom-contact {
+        max-width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .article-bottom > .col-2 {
+        min-width: 100%;
+        flex-wrap: wrap;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+
+@media only screen and (max-width: 1020px) {
     main > .article-main > .article-top {
         display: flex;
         max-width: 100%;
@@ -551,6 +636,10 @@ input[type=reset]:hover {
 
     main > .article-main > .article-top > .article-description-section {
         width: 100%;
+    }
+
+    #article-img-1 {
+        background-position: center;
     }
 
     main > .article-main > .article-bottom {
