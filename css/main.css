@@ -432,7 +432,7 @@ main > .article-main > .article-top > .article-arrow-section {
     display: block;
     background: inherit;
     max-width: 600px;
-    width: 50%;
+    width: 80%;
 }
 .field {
     padding: 5px;
@@ -656,6 +656,10 @@ nav > #nav-link-section > .nav-hamburger.responsive {
 
     nav > #nav-link-section > .nav-hamburger {
         display: block;
+    }
+
+    nav {
+        max-width: 100vw;
     }
 
     main > .article-main > .article-bottom-contact {

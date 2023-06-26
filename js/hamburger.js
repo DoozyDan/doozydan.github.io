@@ -8,6 +8,7 @@ function hamburger() {
         // add responsive class
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+        document.body.style.overflowY = "hidden";
         overlay.className += " responsive";
         overlay.style.width = "100%";
         overlayHide.className += " responsive";
@@ -16,6 +17,7 @@ function hamburger() {
         icon.style.animation = "unset";
     } else {
         // remove responsive class
+        document.body.style.overflowY = "scroll";
         overlay.className = "overlay";
         overlay.style.width = "0";
         overlayHide.className = "overlay-hide";
@@ -33,6 +35,7 @@ const icon = document.getElementById("hamburger-icon");
 
 swup.on("contentReplaced", bar);
 function bar() {
+    document.body.style.overflowY = "scroll";
     overlay.className = "overlay";
     overlay.style.width = "0";
     overlayHide.className = "overlay-hide";
