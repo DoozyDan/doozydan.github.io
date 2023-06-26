@@ -85,22 +85,9 @@
         </div>
         <div class="article-bottom article-bottom-contact">
             <div class="col-2">
-                <h2>FIND WHERE WE ARE</h2>
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NUf4mj_YP7hIODNmA-iapV3QtZq2Duc&ehbc=2E312F" width="640" height="480"></iframe>
-                <p>
-                    VENUE 1:<br>
-                    Maidstone Leisure Centre <br>
-                    Mote Park, Mote Ave, Maidstone ME15 7RN <br>
-                    <br>
-                    <br>
-                    VENUE 2: <br>
-                    Tenterden Leisure Centre, Recreation Ground Rd, Tenterden TN30 6RA
-                </p>
-            </div>
-            <div class="col-2">
                 <p>Please get in contact for any reason you see fit.</p>
                 <div class="form-container">
-                    <form name="cform" id="cform" autocomplete="on">
+                    <form name="cform" id="cform" autocomplete="on" method="post" action="contact-form-process.php">
                         <div class="field">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="First and last name" aria-label="Enter first and last name">
@@ -124,6 +111,21 @@
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="col-2">
+                <h2>FIND WHERE WE ARE</h2>
+                <div  style="margin: 20px;">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NUf4mj_YP7hIODNmA-iapV3QtZq2Duc&ehbc=2E312F" width="640" height="480" style="max-width: 100%;"></iframe>
+                </div>
+                <p style="margin: 0 20px;">
+                    VENUE 1:<br>
+                    Maidstone Leisure Centre <br>
+                    Mote Park, Mote Ave, Maidstone ME15 7RN <br>
+                    <br>
+                    <br>
+                    VENUE 2: <br>
+                    Tenterden Leisure Centre, Recreation Ground Rd, Tenterden TN30 6RA
+                </p>
             </div>
         </div>
     </article>
