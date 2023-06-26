@@ -445,7 +445,7 @@ main > .article-main > .article-top > .article-arrow-section {
     color: white;
 }
 
-input[type=text], input[type=email], textarea[id=message]{
+input[type=text], input[type=email], textarea[id=Message]{
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -454,12 +454,12 @@ input[type=text], input[type=email], textarea[id=message]{
     margin-top: 1px;
 }
 
-textarea[id=message] {
+textarea[id=Message] {
     resize: none;
     height: 130px;
 }
 
-input[type=text]:focus, input[type=email]:focus, textarea[id=message]:focus {
+input[type=text]:focus, input[type=email]:focus, textarea[id=Message]:focus {
     outline: 2px solid #ccc;
 }
 
