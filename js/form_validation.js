@@ -6,22 +6,22 @@ const cform = document.querySelector('#cform');
 const cinput = document.getElementsByTagName('input');
 
 // listen for when a user submits the form
-cform.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // if all the inputs are valid, add success message
-        if (checkName() && checkEmail() && checkMessage()) {
-            // add success message next to submit button that disappears after 3 seconds
-            cform.insertAdjacentHTML('beforeend', '<p>Thanks for reaching out!</p>');
-            // remove submit message after 3 seconds
-            setTimeout(() => {
-                    cform.removeChild(cform.lastChild);
-                }
-                , 5000);
-            // reset the form
-            cform.reset();
-        }
-    }
-);
+// cform.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         // if all the inputs are valid, add success message
+//         if (checkName() && checkEmail() && checkMessage()) {
+//             // add success message next to submit button that disappears after 3 seconds
+//             cform.insertAdjacentHTML('beforeend', '<p>Thanks for reaching out!</p>');
+//             // remove submit message after 3 seconds
+//             setTimeout(() => {
+//                     cform.removeChild(cform.lastChild);
+//                 }
+//                 , 5000);
+//             // reset the form
+//             cform.reset();
+//         }
+//     }
+// );
 
 // check if forms are blank for 5 seconds and remove error message
 cform.addEventListener('input',(e) => {
@@ -161,33 +161,33 @@ function setSuccessFor(input) {
 }
 
 // clear the form
-// function clearForm() {
-//     for ( let i = 0; i < cinput.length; i++ ) {
-//         if(cinput[i].value === 'Send') {
-//             return;
-//         } else {
-//             cinput[i].value = '';
-//             cinput[i].parentElement.classList.remove('error');
-//             cinput[i].parentElement.classList.remove('success');
-//             cinput[i].parentElement.querySelector('small').innerText = '';
-//             cinput[i].style.border = 'none';
-//             cinput[i].style.boxShadow = 'none';
-//             cinput[i].style.borderRadius = '0.25rem';
-//             cinput[i].style.transition = 'all 0.3s ease-in-out';
-//             cinput[i].style.outline = 'none';
-//            
-//             message.value = '';
-//             message.parentElement.classList.remove('error');
-//             message.parentElement.classList.remove('success');
-//             message.parentElement.querySelector('small').innerText = '';
-//             message.style.border = 'none';
-//             message.style.boxShadow = 'none';
-//             message.style.borderRadius = '0.25rem';
-//             message.style.transition = 'all 0.3s ease-in-out';
-//             message.style.outline = 'none';
-//         }
-//     }
-// }
+function clearForm() {
+    for ( let i = 0; i < cinput.length; i++ ) {
+        if(cinput[i].value === 'Send') {
+            return;
+        } else {
+            cinput[i].value = '';
+            cinput[i].parentElement.classList.remove('error');
+            cinput[i].parentElement.classList.remove('success');
+            cinput[i].parentElement.querySelector('small').innerText = '';
+            cinput[i].style.border = 'none';
+            cinput[i].style.boxShadow = 'none';
+            cinput[i].style.borderRadius = '0.25rem';
+            cinput[i].style.transition = 'all 0.3s ease-in-out';
+            cinput[i].style.outline = 'none';
+
+            message.value = '';
+            message.parentElement.classList.remove('error');
+            message.parentElement.classList.remove('success');
+            message.parentElement.querySelector('small').innerText = '';
+            message.style.border = 'none';
+            message.style.boxShadow = 'none';
+            message.style.borderRadius = '0.25rem';
+            message.style.transition = 'all 0.3s ease-in-out';
+            message.style.outline = 'none';
+        }
+    }
+}
 
 // clear the form when the user clicks the button
 cform.addEventListener('reset', (e) => {

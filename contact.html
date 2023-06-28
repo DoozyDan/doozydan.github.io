@@ -86,19 +86,23 @@
         <div class="article-bottom article-bottom-contact">
             <div class="col-2">
                 <h2>Contact Us</h2>
+                <p></p>
                 <div class="form-container">
                     <form action="https://formsubmit.co/f98bef323ad822a0f43f0072499e0aed" method="POST">
                         <input type="text" name="_honey" style="display: none;">
                         <input type="hidden" name="_captcha" value="false">
 <!--                        <input type="hidden" name="_next" value="https://someSuccessPage.com">-->
                         <div class="field">
-                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="text" name="name" placeholder="Full Name *" required>
+                            <small></small>
                         </div>
                         <div class="field">
-                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="email" name="email" placeholder="Email Address *" required>
+                            <small></small>
                         </div>
                         <div class="field">
-                            <textarea placeholder="Your Message" id="Message" name="message" rows="10" required></textarea>
+                            <textarea id="message" placeholder="Send Us a Message *" name="message" rows="10" required></textarea>
+                            <small></small>
                         </div>
                         <div class="form-button-div">
                             <button type="submit">Send</button>
@@ -126,7 +130,7 @@
 </main>
 
 <script src="js/cursor.js"></script>
-<script src="js/form_validation.js"></script>
+<!--<script src="js/form_validation.js"></script>-->
 <script src="js/swup-script.js"></script>
 <script src="js/scrollDown.js"></script>
 <script src="js/hamburger.js"></script>

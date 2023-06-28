@@ -240,6 +240,7 @@ main > .article-main > .article-top {
     max-width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    /*height: calc(100vh - var(--nav-height));*/
 }
 
 main > .article-main > .article-top > .article-title-section {
@@ -445,7 +446,7 @@ main > .article-main > .article-top > .article-arrow-section {
     color: white;
 }
 
-input[type=text], input[type=email], textarea[id=Message]{
+input[type=text], input[type=email], textarea[id=message]{
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -459,7 +460,7 @@ textarea[id=Message] {
     height: 130px;
 }
 
-input[type=text]:focus, input[type=email]:focus, textarea[id=Message]:focus {
+input[type=text]:focus, input[type=email]:focus, textarea[id=message]:focus {
     outline: 2px solid #ccc;
 }
 
